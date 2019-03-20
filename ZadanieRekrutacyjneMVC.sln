@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZadanieRekrutacyjneMVC", "ZadanieRekrutacyjneMVC\ZadanieRekrutacyjneMVC.csproj", "{7ECFB1FB-6CCE-47B4-BFF5-B68FCD80B95C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7ECFB1FB-6CCE-47B4-BFF5-B68FCD80B95C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ECFB1FB-6CCE-47B4-BFF5-B68FCD80B95C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ECFB1FB-6CCE-47B4-BFF5-B68FCD80B95C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ECFB1FB-6CCE-47B4-BFF5-B68FCD80B95C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E29DEB17-7CBD-4B7D-97D5-FF9AC42DB90F}
+	EndGlobalSection
+EndGlobal
