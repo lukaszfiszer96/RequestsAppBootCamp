@@ -1,0 +1,105 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @using (Html.BeginForm("Import", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+    <div style="border:groove">
+        <h3>
+            Załącz pliki (xml, json lub csv) <input type="file" name="inputFile" />
+            <input type="submit" value="Import" />
+        </h3>
+            <h4 style="color:red">@ViewBag.Error</h4>      
+            <h4 style="color:green">@ViewBag.Success</h4>
+            <h4 style="color:red">@ViewBag.ex</h4>        
+    </div>
+    }
+    <table>
+        <tr>
+            <td>Ilość zamówień</td>
+            <td><input type="button" value="Generuj" onclick="location.href='@Url.Action("NumberOfRequestRepo", "Home")'"/></td>
+        </tr>
+        <tr>
+            <td>Ilość zamówień dla klienta o wskazanym identyfikatorze </td>
+            <td>
+                <form action="NumberOfRequestByClientIDRepo" method="post">
+                    <input type="text" name="clientID" required/>
+                    <input type="submit" value="Generuj" />
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>Łączna kwota zamówień</td>
+            <td><input type="button" value="Generuj" onclick="location.href='@Url.Action("TotalAmountRepo", "Home")'" /></td>
+        </tr>
+        <tr>
+            <td>Łączna kwota zamówień dla klienta o wskazanym identyfikatorze</td>
+            <td>
+                <form action="TotalAmountByClientID" method="post">
+                    <input type="text" name="clientID" required/>
+                    <input type="submit" value="Generuj" />
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>Lista wszystkich zamówień</td>
+            <td><input type="button" value="Generuj" onclick="location.href='@Url.Action("ListOfAllRequests", "Home")'" /></td>
+        </tr>
+        <tr>
+            <td>Lista zamówień dla klienta o wskazanym identyfikatorze</td>
+            <td>
+                <form action="ListOfAllRequestsByClientID" method="post">
+                    <input type="text" name="clientID" required/>
+                    <input type="submit" value="Generuj" />
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>Średnia wartość zamówienia</td>
+            <td><input type="button" value="Generuj" onclick="location.href='@Url.Action("AverageValueOfRequest", "Home")'" /></td>
+        </tr>
+        <tr>
+            <td>Średnia wartość zamówienia dla klienta o wskazanym identyfikatorze</td>
+            <td>
+                <form action="AverageValueOfRequestByClientId" method="post">
+                    <input type="text" name="clientID" required />
+                    <input type="submit" value="Generuj" />
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>Ilość zamówień pogrupowanych po nazwie</td>
+            <td><input type="button" value="Generuj" onclick="location.href='@Url.Action("AmountRequestGrupByName", "Home")'" /></td>
+        </tr>
+        <tr>
+            <td>Ilość zamówień pogrupowanych po nazwie dla klienta o wskazanym identyfikatorze</td>
+            <td>
+                <form action="AmountRequestGrupByNameAndClientID" method="post">
+                    <input type="text" name="clientID" required/>
+                    <input type="submit" value="Generuj" />
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>Zamówienia w podanym przedziale cenowym</td>
+            <td>
+                <form action="RangePriceRequests" method="post">
+                    <input type="number" name="fromPrice" placeholder="Przedział od" required/>
+                    <input type="number" name="toPrice" placeholder="Przedział do" required/>
+                    <input type="submit" value="Generuj" />
+                </form>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+    

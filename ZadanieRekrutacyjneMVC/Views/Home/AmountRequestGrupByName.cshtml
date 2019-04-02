@@ -1,0 +1,32 @@
+﻿@model Dictionary<string, Int32>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ListOfAllRequests</title>
+</head>
+<body>
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>Ilość</th>
+        </tr>
+        @foreach (KeyValuePair<string, int> pair in Model)
+        {
+            <tr>
+                <th>
+                    @Html.DisplayFor(modelItem => pair.Key)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => pair.Value)
+                </th>
+            </tr>
+        }
+    </table>
+</body>
+</html>
