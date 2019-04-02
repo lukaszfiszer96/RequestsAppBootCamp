@@ -37,7 +37,7 @@ namespace ZadanieRekrutacyjneMVC.Controllers
                    && !Path.GetFileName(inputFile.FileName).EndsWith(".xml")
                    && !Path.GetFileName(inputFile.FileName).EndsWith(".csv"))
                 {
-                    ViewBag.Error = "Invalid file type";
+                    ViewBag.Error = "Invalid file type!";
                 }
                 else
                 {
