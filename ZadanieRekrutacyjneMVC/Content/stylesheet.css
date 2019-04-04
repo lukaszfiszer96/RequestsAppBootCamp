@@ -1,3 +1,23 @@
-﻿body {
-    font-family: 'Roboto', sans-serif;
+﻿body{
+    background-color:lightgray;
+}
+
+#header1 {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: powderblue;
+    border: groove;
+    text-align: center;
+    width: 1200px;
+}
+
+#tab1{
+    margin-left:auto;
+    margin-right:auto;
+}
+td{
+    border-bottom:ridge;
+}
+input{
+    font-size:medium;
 }

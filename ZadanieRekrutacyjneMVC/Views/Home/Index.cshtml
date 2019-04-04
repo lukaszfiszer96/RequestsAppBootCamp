@@ -16,17 +16,17 @@
 <body>
     @using (Html.BeginForm("Import", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
-        <div style="border:groove">
+        <div id="header1">
             <h3>
                 Załącz pliki (xml, json lub csv) <input type="file" name="inputFile" />
-                <input class="btn-group" type="submit" value="Import" />
+                <input class="card-subtitle" type="submit" value="Import" />
             </h3>
             <h4 style="color:red">@ViewBag.Error</h4>
             <h4 style="color:green">@ViewBag.Success</h4>
             <h4 style="color:red">@ViewBag.ex</h4>
         </div>
     }
-    <table>
+    <table id="tab1">
         <tr>
             <td>Ilość zamówień</td>
             <td><input type="button" value="Generuj" onclick="location.href='@Url.Action("NumberOfRequestRepo", "Home")'" /></td>
